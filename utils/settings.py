@@ -6,12 +6,12 @@ from selenium.webdriver.common.by import By
 SYSTEM = sys.platform
 PATH_TO_PROJECT = os.path.dirname(os.path.abspath(__file__))
 
-if SYSTEM == 'win32':
-    CHROME_DRIVER = "chromedriver.exe"
-else:
+if SYSTEM == 'mac64':
     CHROME_DRIVER = "chromedriver"
+else:
+    CHROME_DRIVER = "chromedriver 3"
 
-DRIVER_PATH = os.path.join(PATH_TO_PROJECT, '../drivers', CHROME_DRIVER)
+DRIVER_PATH = os.path.join(PATH_TO_PROJECT, '/Users/innakoval/Documents/GitHub/test/drivers', CHROME_DRIVER)
 IMPLICITLY_WAIT = 3
 EXPLICITLY_WAIT = 30
 
@@ -21,7 +21,7 @@ DEFAULT_LOCATOR_TYPE = By.XPATH
 UPPERCASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz"
 
-if SYSTEM == 'windows':
+if SYSTEM == 'macOS':
     CHROME_DRIVER = 'chromedriver.exe'
     FIREFOX_DRIVER = 'geckodriver.exe'
     EDGE_DRIVER = 'MicrosoftWebDriver.exe'
